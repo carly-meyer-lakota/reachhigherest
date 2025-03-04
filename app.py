@@ -8,7 +8,8 @@ file_path = 'rh3A-6B .xlsx'
 df = pd.read_excel(file_path, engine='openpyxl')
 
 # Load spaCy model
-nlp = spacy.load('en_core_web_md')
+spacy.cli.download('en_core_web_sm')
+nlp = spacy.load('en_core_web_sm')
 
 # Streamlit app
 st.title('Unit Part Search App')
